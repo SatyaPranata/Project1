@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="src/output.css" />
     <title>Document</title>
   </head>
   <body>
@@ -89,9 +89,9 @@
             <div class="mt-10 relative lg:mt-9 lg:right-0 lg:w-full">
               <div x-data="carousel()" x-init="start()" class="relative w-2/3 overflow-hidden mx-auto">
                 <div class="flex transition-transform duration-700 ease-in-out" :style="'transform: translateX(-' + current * 100 + '%)'">
-                  <img src="img/clients/headphone.png" class="w-full flex-shrink-0" />
-                  <img src="img/clients/keyboard.png" class="w-full flex-shrink-0" />
-                  <img src="img/clients/mouse.png" class="w-full flex-shrink-0" />
+                  <img src="src/img/clients/headphone.png" class="w-full flex-shrink-0" />
+                  <img src="src/img/clients/keyboard.png" class="w-full flex-shrink-0" />
+                  <img src="src/img/clients/mouse.png" class="w-full flex-shrink-0" />
                 </div>
               </div>
             </div>
@@ -114,16 +114,16 @@
         <div class="flex w-max animate-scroll">
           <!-- Konten diulang dua kali agar looping tidak kelihatan putus -->
           <div class="flex">
-            <img src="img/sponsor/Gojek_logo_2022.svg.svg" class="w-[200px] md:w-[300px] lg:w-[400px] p-4 bg-white mx-2 rounded object-contain">
-            <img src="img/sponsor/Tokopedia.svg.svg" class="w-[200px] p-4 bg-white  mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
-            <img src="img/sponsor/Google_2015_logo.svg.svg" class="w-[200px] p-4 bg-white mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
-            <img src="img/sponsor/Logo_Traveloka.svg" class="w-[200px] p-4 bg-white mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
+            <img src="src/img/sponsor/Gojek_logo_2022.svg.svg" class="w-[200px] md:w-[300px] lg:w-[400px] p-4 bg-white mx-2 rounded object-contain">
+            <img src="src/img/sponsor/Tokopedia.svg.svg" class="w-[200px] p-4 bg-white  mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
+            <img src="src/img/sponsor/Google_2015_logo.svg.svg" class="w-[200px] p-4 bg-white mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
+            <img src="src/img/sponsor/Logo_Traveloka.svg" class="w-[200px] p-4 bg-white mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
           </div>
           <div class="flex">
-            <img src="img/sponsor/Gojek_logo_2022.svg.svg" class="w-[200px] p-4 bg-white mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
-            <img src="img/sponsor/Tokopedia.svg.svg" class="w-[200px] p-4 bg-white  mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
-            <img src="img/sponsor/Google_2015_logo.svg.svg" class="w-[200px] p-4 bg-white mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
-            <img src="img/sponsor/Logo_Traveloka.svg" class="w-[200px] p-4 bg-white mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
+            <img src="src/img/sponsor/Gojek_logo_2022.svg.svg" class="w-[200px] p-4 bg-white mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
+            <img src="src/img/sponsor/Tokopedia.svg.svg" class="w-[200px] p-4 bg-white  mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
+            <img src="src/img/sponsor/Google_2015_logo.svg.svg" class="w-[200px] p-4 bg-white mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
+            <img src="src/img/sponsor/Logo_Traveloka.svg" class="w-[200px] p-4 bg-white mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
           </div>
         </div>
       </div>
@@ -141,19 +141,19 @@
           <a href="#" class="w-1/2 px-5 lg:w-1/8">
             <div class="bg-white shadow-lg rounded-lg mb-8 p-7 grayscale transition duration-300 hover:bg-primary hover:text-white hover:grayscale-0">
               <h3 class="text-xl font-semibold text-center pb-3">Keyboard</h3>
-              <img src="img/clients/logo keyboard.png" alt="" class="w-full bg-cover" />
+              <img src="src/img/clients/logo keyboard.png" alt="" class="w-full bg-cover" />
             </div>
           </a>
           <a href="#" class="w-1/2 px-5 lg:w-1/8">
             <div class="bg-white shadow-lg rounded-lg mb-8 p-7 grayscale transition duration-300 hover:bg-primary hover:text-white hover:grayscale-0">
               <h3 class="text-xl font-semibold text-center pb-3">Mouse</h3>
-              <img src="img/clients/logo mouse.png" alt="" class="w-full bg-cover" />
+              <img src="src/img/clients/logo mouse.png" alt="" class="w-full bg-cover" />
             </div>
           </a>
           <a href="#" class="w-1/2 px-5 lg:w-1/8">
             <div class="bg-white shadow-lg rounded-lg mb-8 p-7 grayscale transition duration-300 hover:bg-primary hover:text-white hover:grayscale-0">
               <h3 class="text-xl font-semibold text-center pb-3">Headset</h3>
-              <img src="img/clients/logo headset.png" alt="" class="w-full" />
+              <img src="src/img/clients/logo headset.png" alt="" class="w-full" />
             </div>
           </a>
         </div>
@@ -197,7 +197,7 @@
           <div id="listcarousel" class="flex space-x-4 overflow-x-auto scroll-smooth cursor-grab p-10">
             <div class="min-w-[300px] bg-white p-4 shadow rounded transition duration-300 hover:bg-slate-900 hover:text-white hover:border-white hover:shadow-xl">
               <h1 class="text-center text-2xl font-bold p-3">Mouse Razer</h1>
-              <img src="img/product/Razer Mouse1.png" alt="Mouse Razer" class="w-full rounded mb-4 h-38 object-contain" />
+              <img src="src/img/product/Razer Mouse1.png" alt="Mouse Razer" class="w-full rounded mb-4 h-38 object-contain" />
               <h3 class="text-lg font-semibold text-center">Mouse Razer</h3>
               <div class="flex justify-between p-5">
                 <p class="text-secondary font-medium text-[15px]">Rp.399.999</p>
@@ -206,7 +206,7 @@
             </div>
             <div class="min-w-[300px] bg-white p-4 shadow rounded transition duration-300 hover:bg-slate-900 hover:text-white hover:border-white hover:shadow-xl">
               <h1 class="text-center text-2xl font-bold p-3">Mouse Razer</h1>
-              <img src="img/product/Razer Mouse2.png" alt="Mouse Razer" class="w-full rounded mb-4 h-38 object-contain" />
+              <img src="src/img/product/Razer Mouse2.png" alt="Mouse Razer" class="w-full rounded mb-4 h-38 object-contain" />
               <h3 class="text-lg font-semibold text-center">Mouse Razer</h3>
               <div class="flex justify-between p-5">
                 <p class="text-secondary font-medium text-[15px]">Rp.400.000</p>
@@ -215,7 +215,7 @@
             </div>
             <div class="min-w-[300px] bg-white p-4 shadow rounded transition duration-300 hover:bg-slate-900 hover:text-white hover:border-white hover:shadow-xl">
               <h1 class="text-center text-2xl font-bold p-3">Mouse Razer</h1>
-              <img src="img/product/Razer Mouse3.png" alt="Mouse Razer" class="w-full rounded mb-4 h-38 object-contain" />
+              <img src="src/img/product/Razer Mouse3.png" alt="Mouse Razer" class="w-full rounded mb-4 h-38 object-contain" />
               <h3 class="text-lg font-semibold text-center">Mouse Razer</h3>
               <div class="flex justify-between p-5">
                 <p class="text-secondary font-medium text-[15px]">Rp.300.000</p>
@@ -224,7 +224,7 @@
             </div>
             <div class="min-w-[300px] bg-white p-4 shadow rounded transition duration-300 hover:bg-slate-900 hover:text-white hover:border-white hover:shadow-xl">
               <h1 class="text-center text-2xl font-bold p-3">Keyboard Razer</h1>
-              <img src="img/product/Razer Keyboard1.jpg" alt="Keyboard Razer" class="w-full rounded mb-4 h-38 object-contain" />
+              <img src="src/img/product/Razer Keyboard1.jpg" alt="Keyboard Razer" class="w-full rounded mb-4 h-38 object-contain" />
               <h3 class="text-lg font-semibold text-center">Keyboard Razer</h3>
               <div class="flex justify-between p-5">
                 <p class="text-secondary font-medium text-[15px]">Rp.300.000</p>
@@ -233,7 +233,7 @@
             </div>
             <div class="min-w-[300px] bg-white p-4 shadow rounded transition duration-300 hover:bg-slate-900 hover:text-white hover:border-white hover:shadow-xl">
               <h1 class="text-center text-2xl font-bold p-3">Keyboard Razer</h1>
-              <img src="img/product/Razer Keyboard2.jpg" alt="Keyboard Razer" class="w-full rounded mb-4 h-38 object-contain" />
+              <img src="src/img/product/Razer Keyboard2.jpg" alt="Keyboard Razer" class="w-full rounded mb-4 h-38 object-contain" />
               <h3 class="text-lg font-semibold text-center">Keyboard Razer</h3>
               <div class="flex justify-between p-5">
                 <p class="text-secondary font-medium text-[15px]">Rp.300.000</p>
@@ -242,7 +242,7 @@
             </div>
             <div class="min-w-[300px] bg-white p-4 shadow rounded transition duration-300 hover:bg-slate-900 hover:text-white hover:border-white hover:shadow-xl">
               <h1 class="text-center text-2xl font-bold p-3">Headphone Razer</h1>
-              <img src="img/product/Razer Headphone1.png" alt="Headphone Razer" class="w-full rounded mb-4 h-38 object-contain" />
+              <img src="src/img/product/Razer Headphone1.png" alt="Headphone Razer" class="w-full rounded mb-4 h-38 object-contain" />
               <h3 class="text-lg font-semibold text-center">Headphone Razer</h3>
               <div class="flex justify-between p-5">
                 <p class="text-secondary font-medium text-[15px]">Rp.300.000</p>
@@ -251,7 +251,7 @@
             </div>
             <div class="min-w-[300px] bg-white p-4 shadow rounded transition duration-300 hover:bg-slate-900 hover:text-white hover:border-white hover:shadow-xl">
               <h1 class="text-center text-2xl font-bold p-3">Headphone Razer</h1>
-              <img src="img/product/Razer Headphone2.png" alt="Headphone Razer" class="w-full rounded mb-4 h-38 object-contain" />
+              <img src="src/img/product/Razer Headphone2.png" alt="Headphone Razer" class="w-full rounded mb-4 h-38 object-contain" />
               <h3 class="text-lg font-semibold text-center">Headphone Razer</h3>
               <div class="flex justify-between p-5">
                 <p class="text-secondary font-medium text-[15px]">Rp.300.000</p>
@@ -260,7 +260,7 @@
             </div>
             <div class="min-w-[300px] bg-white p-4 shadow rounded transition duration-300 hover:bg-slate-900 hover:text-white hover:border-white hover:shadow-xl">
               <h1 class="text-center text-2xl font-bold p-3">Earphone Razer</h1>
-              <img src="img/product/Razer Earphone.png" alt="Earphone Razer" class="w-full rounded mb-4 h-38 object-contain" />
+              <img src="src/img/product/Razer Earphone.png" alt="Earphone Razer" class="w-full rounded mb-4 h-38 object-contain" />
               <h3 class="text-lg font-semibold text-center">Earphone Razer</h3>
               <div class="flex justify-between p-5">
                 <p class="text-secondary font-medium text-[15px]">Rp.300.000</p>
@@ -443,7 +443,7 @@
     </section>
     <!-- Footer End  -->
 
-    <script src="js/script.js"></script>
+    <script src="src/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   </body>
 </html>
