@@ -1,0 +1,449 @@
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="output.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10 transition duration-300 h-16">
+      <div class="container mx-auto">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a href="#home" class="font-bold text-lg text-primary block py-6">Wahwik</a>
+          </div>
+          <div class="flex items-center justify-center p-4">
+            <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 cursor-pointer lg:hidden">
+              <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+            </button>
+
+            <nav id="nav-menu" class="hidden opacity-100 absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-16 lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a href="#home" class="text-base text-black py-2 mx-8 flex hover:text-primary transition duration-300">Beranda</a>
+                </li>
+                <li class="group">
+                  <a href="#kerjasama" class="text-base text-black py-2 mx-8 flex hover:text-primary transition duration-300">Hubungan</a>
+                </li>
+                <li class="group">
+                  <a href="#menu" class="text-base text-black py-2 mx-8 flex hover:text-primary transition duration-300">Menu</a>
+                </li>
+                <li class="group">
+                  <a href="#penjualan" class="text-base text-black py-2 mx-8 flex hover:text-primary transition duration-300">Informasi</a>
+                </li>
+                <li class="group">
+                  <a href="#list" class="text-base text-black py-2 mx-8 flex hover:text-primary transition duration-300">Produk</a>
+                </li>
+                <li class="group">
+                  <a href="#testimoni" class="text-base text-black py-2 mx-8 flex hover:text-primary transition duration-300">Testimoni</a>
+                </li>
+                <li class="group relative mx-8">
+                  <a href="#" class="flex items-center text-base text-black py-2 hover:text-primary transition duration-300 w-[50px]">
+                    <i class="fa-solid fa-cart-shopping text-xl "></i>
+                    <!-- Badge -->
+                    <span class="absolute -top-1 -right-0 bg-red-600 text-white text-xs font-semibold rounded-full px-2 py-[1px] lg:-top-1 lg:right-2">
+                      3
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <section id="home" class="pt-36">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap">
+          <div class="w-full h-full self-center px-4 lg:w-1/2">
+            <h1 class="text-base font-semibold text-secondary md:text-xl lg:text-2xl">
+              <span class="block font-bold mb-3 text-dark text-3xl md:text-4xl lg:text-6xl text-black"
+                >Produk Yang Kami Tawarkan,
+                <div x-data="carousel()" x-init="start()" class="relative overflow-hidden w-full py-1 xl:w-1/2">
+                  <div class="flex transition-transform duration-700 ease-in-out" :style="'transform: translateX(-' + current * 100 + '%)'">
+                    <h1 class="w-full flex-shrink-0 text-secondary">Headphone</h1>
+                    <h1 class="w-full flex-shrink-0 text-secondary">Keyboard</h1>
+                    <h1 class="w-full flex-shrink-0 text-secondary">Mouse</h1>
+                  </div>
+                </div>
+                Untuk Anda Semua</span
+              >
+            </h1>
+            <h2 class="font-medium">Produk <span class="text-black font-bold">Digital</span></h2>
+
+            <p class="font-medium text-secondary mb-5 leading-relaxed">Mencoba Belajar Membuat <span class="text-black font-bold underline">Portopolio</span></p>
+
+            <a href="#" class="text-base font-semibold bg-primary py-3 px-4 text-white rounded-full hover:shadow-lg hover:bg-teal-700 hover:opacity-70 transition duration-300 hover:scale-90">Hubungi Saya</a>
+          </div>
+          <div class="w-full self-end lg:w-1/2">
+            <div class="mt-10 relative lg:mt-9 lg:right-0 lg:w-full">
+              <div x-data="carousel()" x-init="start()" class="relative w-2/3 overflow-hidden mx-auto">
+                <div class="flex transition-transform duration-700 ease-in-out" :style="'transform: translateX(-' + current * 100 + '%)'">
+                  <img src="img/clients/headphone.png" class="w-full flex-shrink-0" />
+                  <img src="img/clients/keyboard.png" class="w-full flex-shrink-0" />
+                  <img src="img/clients/mouse.png" class="w-full flex-shrink-0" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Kerja Sama Start -->
+    <section id="kerjasama" class="pt-36">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap justify-center p-5 lg:p-0">
+          <div class="w-full">
+            <h2 class="text-3xl font-bold text-center mb-5 text-primary lg:text-6xl">Kerja Sama</h2>
+            <p class="text-lg text-secondary text-center mb-5 lg:text-2xl">Kami telah bekerja sama dengan beberapa perusahaan besar.</p>
+          </div>
+        </div>
+      <div class="overflow-hidden w-full">
+        <div class="flex w-max animate-scroll">
+          <!-- Konten diulang dua kali agar looping tidak kelihatan putus -->
+          <div class="flex">
+            <img src="img/sponsor/Gojek_logo_2022.svg.svg" class="w-[200px] md:w-[300px] lg:w-[400px] p-4 bg-white mx-2 rounded object-contain">
+            <img src="img/sponsor/Tokopedia.svg.svg" class="w-[200px] p-4 bg-white  mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
+            <img src="img/sponsor/Google_2015_logo.svg.svg" class="w-[200px] p-4 bg-white mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
+            <img src="img/sponsor/Logo_Traveloka.svg" class="w-[200px] p-4 bg-white mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
+          </div>
+          <div class="flex">
+            <img src="img/sponsor/Gojek_logo_2022.svg.svg" class="w-[200px] p-4 bg-white mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
+            <img src="img/sponsor/Tokopedia.svg.svg" class="w-[200px] p-4 bg-white  mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
+            <img src="img/sponsor/Google_2015_logo.svg.svg" class="w-[200px] p-4 bg-white mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
+            <img src="img/sponsor/Logo_Traveloka.svg" class="w-[200px] p-4 bg-white mx-2 rounded object-contain md:w-[300px] lg:w-[400px]">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Kerja Sama End -->
+
+    <!-- Menu Section Start -->
+    <section id="menu" class="pt-36 pb-32">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap justify-center">
+          <div class="w-full">
+            <h2 class="text-3xl font-bold text-center text-primary mb-5 lg:text-6xl">Menu</h2>
+            <p class="text-lg text-secondary text-center mb-5 lg:text-2xl">Berikut adalah beberapa produk yang kami tawarkan.</p>
+          </div>
+          <a href="#" class="w-1/2 px-5 lg:w-1/8">
+            <div class="bg-white shadow-lg rounded-lg mb-8 p-7 grayscale transition duration-300 hover:bg-primary hover:text-white hover:grayscale-0">
+              <h3 class="text-xl font-semibold text-center pb-3">Keyboard</h3>
+              <img src="img/clients/logo keyboard.png" alt="" class="w-full bg-cover" />
+            </div>
+          </a>
+          <a href="#" class="w-1/2 px-5 lg:w-1/8">
+            <div class="bg-white shadow-lg rounded-lg mb-8 p-7 grayscale transition duration-300 hover:bg-primary hover:text-white hover:grayscale-0">
+              <h3 class="text-xl font-semibold text-center pb-3">Mouse</h3>
+              <img src="img/clients/logo mouse.png" alt="" class="w-full bg-cover" />
+            </div>
+          </a>
+          <a href="#" class="w-1/2 px-5 lg:w-1/8">
+            <div class="bg-white shadow-lg rounded-lg mb-8 p-7 grayscale transition duration-300 hover:bg-primary hover:text-white hover:grayscale-0">
+              <h3 class="text-xl font-semibold text-center pb-3">Headset</h3>
+              <img src="img/clients/logo headset.png" alt="" class="w-full" />
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Menu Section End -->
+
+    <!-- Penjualan Section Start -->
+    <section id="penjualan" class="pt-36 pb-32 bg-slate-900">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap justify-center p-5 lg:p-0">
+          <div class="w-full">
+            <h2 class="text-3xl font-bold text-center mb-5 text-white lg:text-6xl">Penjualan Terkini</h2>
+            <p class="text-lg text-secondary text-center mb-5 lg:text-2xl">Berikut adalah beberapa penjualan yang telah saya lakukan.</p>
+          </div>
+          <div class="w-full px-5 lg:w-1/2">
+            <h3 class="text-3xl font-bold text-center mb-3 text-white lg:text-5xl"><span class="num" data-val="15000"></span>+</h3>
+            <p class="text-xl font-medium text-center mb-10 text-white lg:text-2xl">Produk</p>
+          </div>
+          <div class="w-full px-5 lg:w-1/2">
+            <h3 class="text-3xl font-bold text-center mb-3 text-white lg:text-5xl"><span class="num" data-val="150000"></span>+</h3>
+            <p class="text-xl font-medium text-center text-white lg:text-2xl">Pengunjung</p>
+          </div>
+          <div class="w-full">
+            <p class="text-lg text-secondary text-center mb-5 lg:text-2xl">Terima kasih telah berbelanja di toko kami. Kami berharap Anda puas dengan produk yang Anda beli.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Penjualan Section End -->
+
+    <!-- List Item Section Start -->
+    <section id="list" class="pt-36 pb-32 bg-gray-100">
+      <div class="container mx-auto overflow-hidden">
+        <div class="flex flex-wrap justify-center p-5 lg:p-0">
+          <div class="w-full">
+            <h2 class="text-3xl font-bold text-center mb-5 text-primary lg:text-6xl">Produk Terbaru</h2>
+            <p class="text-lg text-secondary text-center mb-5 lg:text-2xl">Berikut adalah beberapa produk terbaru yang kami tawarkan.</p>
+          </div>
+        <div class="overflow-hidden">
+          <div id="listcarousel" class="flex space-x-4 overflow-x-auto scroll-smooth cursor-grab p-10">
+            <div class="min-w-[300px] bg-white p-4 shadow rounded transition duration-300 hover:bg-slate-900 hover:text-white hover:border-white hover:shadow-xl">
+              <h1 class="text-center text-2xl font-bold p-3">Mouse Razer</h1>
+              <img src="img/product/Razer Mouse1.png" alt="Mouse Razer" class="w-full rounded mb-4 h-38 object-contain" />
+              <h3 class="text-lg font-semibold text-center">Mouse Razer</h3>
+              <div class="flex justify-between p-5">
+                <p class="text-secondary font-medium text-[15px]">Rp.399.999</p>
+                <p class="text-secondary font-medium text-[15px]">Stok : 20</p>
+              </div>
+            </div>
+            <div class="min-w-[300px] bg-white p-4 shadow rounded transition duration-300 hover:bg-slate-900 hover:text-white hover:border-white hover:shadow-xl">
+              <h1 class="text-center text-2xl font-bold p-3">Mouse Razer</h1>
+              <img src="img/product/Razer Mouse2.png" alt="Mouse Razer" class="w-full rounded mb-4 h-38 object-contain" />
+              <h3 class="text-lg font-semibold text-center">Mouse Razer</h3>
+              <div class="flex justify-between p-5">
+                <p class="text-secondary font-medium text-[15px]">Rp.400.000</p>
+                <p class="text-secondary font-medium text-[15px]">Stok : 10</p>
+              </div>
+            </div>
+            <div class="min-w-[300px] bg-white p-4 shadow rounded transition duration-300 hover:bg-slate-900 hover:text-white hover:border-white hover:shadow-xl">
+              <h1 class="text-center text-2xl font-bold p-3">Mouse Razer</h1>
+              <img src="img/product/Razer Mouse3.png" alt="Mouse Razer" class="w-full rounded mb-4 h-38 object-contain" />
+              <h3 class="text-lg font-semibold text-center">Mouse Razer</h3>
+              <div class="flex justify-between p-5">
+                <p class="text-secondary font-medium text-[15px]">Rp.300.000</p>
+                <p class="text-secondary font-medium text-[15px]">Stok : 30</p>
+              </div>
+            </div>
+            <div class="min-w-[300px] bg-white p-4 shadow rounded transition duration-300 hover:bg-slate-900 hover:text-white hover:border-white hover:shadow-xl">
+              <h1 class="text-center text-2xl font-bold p-3">Keyboard Razer</h1>
+              <img src="img/product/Razer Keyboard1.jpg" alt="Keyboard Razer" class="w-full rounded mb-4 h-38 object-contain" />
+              <h3 class="text-lg font-semibold text-center">Keyboard Razer</h3>
+              <div class="flex justify-between p-5">
+                <p class="text-secondary font-medium text-[15px]">Rp.300.000</p>
+                <p class="text-secondary font-medium text-[15px]">Stok : 30</p>
+              </div>
+            </div>
+            <div class="min-w-[300px] bg-white p-4 shadow rounded transition duration-300 hover:bg-slate-900 hover:text-white hover:border-white hover:shadow-xl">
+              <h1 class="text-center text-2xl font-bold p-3">Keyboard Razer</h1>
+              <img src="img/product/Razer Keyboard2.jpg" alt="Keyboard Razer" class="w-full rounded mb-4 h-38 object-contain" />
+              <h3 class="text-lg font-semibold text-center">Keyboard Razer</h3>
+              <div class="flex justify-between p-5">
+                <p class="text-secondary font-medium text-[15px]">Rp.300.000</p>
+                <p class="text-secondary font-medium text-[15px]">Stok : 30</p>
+              </div>
+            </div>
+            <div class="min-w-[300px] bg-white p-4 shadow rounded transition duration-300 hover:bg-slate-900 hover:text-white hover:border-white hover:shadow-xl">
+              <h1 class="text-center text-2xl font-bold p-3">Headphone Razer</h1>
+              <img src="img/product/Razer Headphone1.png" alt="Headphone Razer" class="w-full rounded mb-4 h-38 object-contain" />
+              <h3 class="text-lg font-semibold text-center">Headphone Razer</h3>
+              <div class="flex justify-between p-5">
+                <p class="text-secondary font-medium text-[15px]">Rp.300.000</p>
+                <p class="text-secondary font-medium text-[15px]">Stok : 30</p>
+              </div>
+            </div>
+            <div class="min-w-[300px] bg-white p-4 shadow rounded transition duration-300 hover:bg-slate-900 hover:text-white hover:border-white hover:shadow-xl">
+              <h1 class="text-center text-2xl font-bold p-3">Headphone Razer</h1>
+              <img src="img/product/Razer Headphone2.png" alt="Headphone Razer" class="w-full rounded mb-4 h-38 object-contain" />
+              <h3 class="text-lg font-semibold text-center">Headphone Razer</h3>
+              <div class="flex justify-between p-5">
+                <p class="text-secondary font-medium text-[15px]">Rp.300.000</p>
+                <p class="text-secondary font-medium text-[15px]">Stok : 30</p>
+              </div>
+            </div>
+            <div class="min-w-[300px] bg-white p-4 shadow rounded transition duration-300 hover:bg-slate-900 hover:text-white hover:border-white hover:shadow-xl">
+              <h1 class="text-center text-2xl font-bold p-3">Earphone Razer</h1>
+              <img src="img/product/Razer Earphone.png" alt="Earphone Razer" class="w-full rounded mb-4 h-38 object-contain" />
+              <h3 class="text-lg font-semibold text-center">Earphone Razer</h3>
+              <div class="flex justify-between p-5">
+                <p class="text-secondary font-medium text-[15px]">Rp.300.000</p>
+                <p class="text-secondary font-medium text-[15px]">Stok : 30</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- List Item Section End -->
+
+    <!-- Testimoni Start -->
+    <section id="testimoni" class="pt-36 pb-32">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap justify-center p-5 lg:p-0">
+          <div class="w-full">
+            <h2 class="text-3xl font-bold text-center mb-5 text-primary lg:text-6xl">Testimoni</h2>
+            <p class="text-lg text-secondary text-center mb-5 lg:text-2xl">Berikut adalah beberapa testimoni dari pelanggan kami.</p>
+          </div>
+        <div class="overflow-hidden">
+          <div class="flex w-max animate-scroll">
+            <!-- Konten diulang dua kali agar looping tidak kelihatan putus -->
+            <div class="flex w-full">
+              <div class="w-[500px] px-5">
+                <div class="bg-white shadow-lg rounded-lg p-7 mb-8">
+                <p class="py-5">⭐⭐⭐⭐⭐</p>
+                <p class="text-secondary font-medium mb-4">"Produk yang saya beli sangat berkualitas dan sesuai dengan deskripsi. Saya sangat puas dengan pelayanan yang diberikan."</p>
+                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile Random" class="w-[40px] rounded-full" />
+                <h3 class="text-lg font-semibold">John Doe</h3>
+                <p class="text-secondary">Pelanggan Setia</p>
+                </div>
+            </div>
+              <div class="w-[500px] px-5">
+                <div class="bg-white shadow-lg rounded-lg p-7 mb-8">
+                <p class="py-5">⭐⭐⭐⭐⭐</p>
+                <p class="text-secondary font-medium mb-4">"Produk yang saya beli sangat berkualitas dan sesuai dengan deskripsi. Saya sangat puas dengan pelayanan yang diberikan."</p>
+                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile Random" class="w-[40px] rounded-full" />
+                <h3 class="text-lg font-semibold">John Doe</h3>
+                <p class="text-secondary">Pelanggan Setia</p>
+                </div>
+            </div>
+              <div class="w-[500px] px-5">
+                <div class="bg-white shadow-lg rounded-lg p-7 mb-8">
+                <p class="py-5">⭐⭐⭐⭐⭐</p>
+                <p class="text-secondary font-medium mb-4">"Produk yang saya beli sangat berkualitas dan sesuai dengan deskripsi. Saya sangat puas dengan pelayanan yang diberikan."</p>
+                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile Random" class="w-[40px] rounded-full" />
+                <h3 class="text-lg font-semibold">John Doe</h3>
+                <p class="text-secondary">Pelanggan Setia</p>
+                </div>
+            </div>
+              
+          </div>
+            <div class="flex">
+              <div class="w-[500px] px-5">
+                <div class="bg-white shadow-lg rounded-lg p-7 mb-8">
+                <p class="py-5">⭐⭐⭐⭐⭐</p>
+                <p class="text-secondary font-medium mb-4">"Produk yang saya beli sangat berkualitas dan sesuai dengan deskripsi. Saya sangat puas dengan pelayanan yang diberikan."</p>
+                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile Random" class="w-[40px] rounded-full" />
+                <h3 class="text-lg font-semibold">John Doe</h3>
+                <p class="text-secondary">Pelanggan Setia</p>
+                </div>
+            </div>
+              <div class="w-[500px] px-5">
+                <div class="bg-white shadow-lg rounded-lg p-7 mb-8">
+                <p class="py-5">⭐⭐⭐⭐⭐</p>
+                <p class="text-secondary font-medium mb-4">"Produk yang saya beli sangat berkualitas dan sesuai dengan deskripsi. Saya sangat puas dengan pelayanan yang diberikan."</p>
+                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile Random" class="w-[40px] rounded-full" />
+                <h3 class="text-lg font-semibold">John Doe</h3>
+                <p class="text-secondary">Pelanggan Setia</p>
+                </div>
+            </div>
+              <div class="w-[500px] px-5">
+                <div class="bg-white shadow-lg rounded-lg p-7 mb-8">
+                <p class="py-5">⭐⭐⭐⭐⭐</p>
+                <p class="text-secondary font-medium mb-4">"Produk yang saya beli sangat berkualitas dan sesuai dengan deskripsi. Saya sangat puas dengan pelayanan yang diberikan."</p>
+                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile Random" class="w-[40px] rounded-full" />
+                <h3 class="text-lg font-semibold">John Doe</h3>
+                <p class="text-secondary">Pelanggan Setia</p>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimoni End -->
+
+    <!-- Footer Start -->
+    <section id="footer" class="pt-24 pb-26 bg-slate-900">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
+            <h2 class="font-bold text-4xl text-white mb-5">Wahwik</h2>
+            <h3 class="font-bold text-2xl mb-2">Hubungi Kami</h3>
+            <p>satyapranata15@gmail.com</p>
+            <p>Jl. Jayagiri Denpasar Bali</p>
+            <p>Denpasar</p>
+          </div>
+
+          <div class="w-full px-4 mb-12 md:w-1/3">
+            <h3 class="font-semibold text-xl text-white mb-5">Kategori Tulisan</h3>
+            <ul class="text-slate-300">
+              <li>
+                <a href="#" class="inline-block text-base hover:text-primary mb-3 transition duration-300">Programming</a>
+              </li>
+              <li>
+                <a href="#" class="inline-block text-base hover:text-primary mb-3 transition duration-300">Teknologi</a>
+              </li>
+              <li>
+                <a href="#" class="inline-block text-base hover:text-primary mb-3 transition duration-300">Tentang Kami</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="w-full px-4 mb-12 md:w-1/3">
+            <h3 class="font-semibold text-xl text-white mb-5">Tautan</h3>
+            <ul class="text-slate-300">
+              <li>
+                <a href="#home" class="inline-block text-base hover:text-primary mb-3 transition duration-300">Home</a>
+              </li>
+              <li>
+                <a href="#about" class="inline-block text-base hover:text-primary mb-3 transition duration-300">Tentang Saya</a>
+              </li>
+              <li>
+                <a href="#portopolio" class="inline-block text-base hover:text-primary mb-3 transition duration-300">Portopolio</a>
+              </li>
+              <li>
+                <a href="#contact" class="inline-block text-base hover:text-primary mb-3 transition duration-300">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="w-full pt-10 border-t border-slate-700">
+          <div class="flex items-center justify-center">
+            <!-- youtube -->
+            <a href="#" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 transition duration-300 hover:border-primary hover:bg-primary hover:text-white">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>YouTube</title>
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                />
+              </svg>
+            </a>
+
+            <!-- instagram -->
+            <a href="#" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 transition duration-300 hover:border-primary hover:bg-primary hover:text-white">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>Instagram</title>
+                <path
+                  d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+                />
+              </svg>
+            </a>
+
+            <!-- Whatsapp -->
+            <a href="#" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 transition duration-300 hover:border-primary hover:bg-primary hover:text-white">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>WhatsApp</title>
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                />
+              </svg>
+            </a>
+
+            <!-- github -->
+            <a href="#" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 transition duration-300 hover:border-primary hover:bg-primary hover:text-white">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>GitHub</title>
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+            </a>
+          </div>
+          <p class="font-medium text-sm text-slate-500 text-center mt-2">Dibuat Oleh Wahwik Menggunakan Tailwind CSS</p>
+        </div>
+      </div>
+    </section>
+    <!-- Footer End  -->
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  </body>
+</html>

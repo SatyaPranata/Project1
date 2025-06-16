@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+@theme {
+  --color-primary: #1e293b;
+  --color-secondary: #64748b;
+}
+
+.navbar-fixed {
+  @apply fixed top-0 left-0 w-full z-50 bg-white shadow-sm opacity-90;
+  backdrop-filter: blur(10px);
+}
+
+.hamburger-line {
+  @apply w-[30px] h-[2px] my-2 block bg-black;
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45 origin-top-left;
+}
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45 origin-top-left;
+}
