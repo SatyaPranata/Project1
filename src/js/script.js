@@ -128,54 +128,40 @@ function autoScrollCarousel() {
 
 autoScrollCarousel();
 
-// // Toggle chatbox visibility
-// function toggleChat() {
-//   const chat = document.getElementById("chatbox");
-//   chat.classList.toggle("hidden");
-// }
+function toggleChat() {
+  const chat = document.getElementById("chatbox");
+  chat.classList.toggle("hidden");
+}
 
-// // Fungsi kirim pesan ke Gemini API
-// async function sendMessage() {
-//   const input = document.getElementById("chat-input");
-//   const content = document.getElementById("chat-content");
+function sendMessage(msg = null) {
+  const input = document.getElementById("chat-input");
+  const content = document.getElementById("chat-content");
 
-//   const userMsg = input.value.trim();
-//   if (!userMsg) return;
+  const userMsg = msg || input.value.trim();
+  if (!userMsg) return;
 
-//   // Tampilkan pesan dari user
-//   content.innerHTML += `<div><span class="font-semibold">Kamu:</span> ${userMsg}</div>`;
+  // Tampilkan pesan user
+  content.innerHTML += `<div><span class="font-semibold">Kamu:</span> ${userMsg}</div>`;
 
-//   // Tampilkan indikator mengetik
-//   content.innerHTML += `<div id="loading-response"><span class="font-semibold">Bot:</span> Mengetik...</div>`;
-//   content.scrollTop = content.scrollHeight;
+  // Logika respons bot
+  let botResponse = "Maaf, saya belum mengerti.";
+  const msgLower = userMsg.toLowerCase();
 
-//   // Reset input
-//   input.value = "";
+  if (msgLower.includes("halo")) botResponse = "Halo juga! Ada yang bisa saya bantu?";
+  else if (msgLower.includes("siapa kamu")) botResponse = "Saya chatbot buatan Satya.";
+  else if (msgLower.includes("harga")) botResponse = "Silakan cek harga di halaman produk.";
+  else if (msgLower.includes("booking")) botResponse = "Silakan isi formulir booking.";
+  else if (msgLower.includes("terima kasih")) botResponse = "Sama-sama!";
 
-//   try {
-//     const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyAvKwnPr5nqtI9zyDTuDYvD35srg8KPKWQ", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify({
-//         contents: [{ parts: [{ text: userMsg }] }],
-//       }),
-//     });
+  setTimeout(() => {
+    content.innerHTML += `<div><span class="font-semibold">Bot:</span> ${botResponse}</div>`;
+    content.scrollTop = content.scrollHeight;
+  }, 500);
 
-//     const result = await response.json();
+  input.value = "";
+}
 
-//     let botReply = "Maaf, saya belum bisa menjawab.";
-//     if (result?.candidates?.[0]?.content?.parts?.[0]?.text) {
-//       botReply = result.candidates[0].content.parts[0].text;
-//     }
-
-//     document.getElementById("loading-response").remove();
-//     content.innerHTML += `<div><span class="font-semibold">Bot:</span> ${botReply}</div>`;
-//     content.scrollTop = content.scrollHeight;
-//   } catch (error) {
-//     console.error("Error:", error);
-//     document.getElementById("loading-response").remove();
-//     content.innerHTML += `<div><span class="font-semibold">Bot:</span> Terjadi kesalahan saat menghubungi AI.</div>`;
-//   }
-// }
+function quickReply(text) {
+  document.getElementById("chat-input").value = text;
+  sendMessage(text);
+}
