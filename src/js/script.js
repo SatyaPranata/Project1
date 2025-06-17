@@ -127,3 +127,40 @@ function autoScrollCarousel() {
 }
 
 autoScrollCarousel();
+
+// // Chatbot Functionality
+// function toggleChat() {
+//   const chat = document.getElementById("chatbox");
+//   chat.classList.toggle("hidden");
+// }
+
+// function sendMessage() {
+//   const input = document.getElementById("chat-input");
+//   const content = document.getElementById("chat-content");
+
+//   const userMsg = input.value.trim();
+//   if (!userMsg) return;
+
+//   // Tambahkan pesan user
+//   content.innerHTML += `<div><span class="font-semibold">Kamu:</span> ${userMsg}</div>`;
+
+//   // Logika bot sederhana
+//   let botResponse = "Maaf, saya belum mengerti pertanyaan itu.";
+//   const msg = userMsg.toLowerCase();
+
+//   if (msg.includes("halo")) botResponse = "Halo juga! Ada yang bisa saya bantu?";
+//   else if (msg.includes("siapa kamu")) botResponse = "Saya chatbot buatan Satya.";
+//   else if (msg.includes("terima kasih")) botResponse = "Sama-sama, senang membantu!";
+//   else if (msg.includes("website ini")) botResponse = "Ini adalah landing page dari Satya Pranata.";
+
+//   setTimeout(() => {
+//     content.innerHTML += `<div><span class="font-semibold">Bot:</span> ${botResponse}</div>`;
+//     content.scrollTop = content.scrollHeight;
+//   }, 500);
+
+//   input.value = "";
+// }
+
+window.chatbaseConfig = {
+  chatbotId: "eLxzmUdJ8spY4COWqWRh4",
+};
