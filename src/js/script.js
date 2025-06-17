@@ -128,39 +128,54 @@ function autoScrollCarousel() {
 
 autoScrollCarousel();
 
-// // Chatbot Functionality
+// // Toggle chatbox visibility
 // function toggleChat() {
 //   const chat = document.getElementById("chatbox");
 //   chat.classList.toggle("hidden");
 // }
 
-// function sendMessage() {
+// // Fungsi kirim pesan ke Gemini API
+// async function sendMessage() {
 //   const input = document.getElementById("chat-input");
 //   const content = document.getElementById("chat-content");
 
 //   const userMsg = input.value.trim();
 //   if (!userMsg) return;
 
-//   // Tambahkan pesan user
+//   // Tampilkan pesan dari user
 //   content.innerHTML += `<div><span class="font-semibold">Kamu:</span> ${userMsg}</div>`;
 
-//   // Logika bot sederhana
-//   let botResponse = "Maaf, saya belum mengerti pertanyaan itu.";
-//   const msg = userMsg.toLowerCase();
+//   // Tampilkan indikator mengetik
+//   content.innerHTML += `<div id="loading-response"><span class="font-semibold">Bot:</span> Mengetik...</div>`;
+//   content.scrollTop = content.scrollHeight;
 
-//   if (msg.includes("halo")) botResponse = "Halo juga! Ada yang bisa saya bantu?";
-//   else if (msg.includes("siapa kamu")) botResponse = "Saya chatbot buatan Satya.";
-//   else if (msg.includes("terima kasih")) botResponse = "Sama-sama, senang membantu!";
-//   else if (msg.includes("website ini")) botResponse = "Ini adalah landing page dari Satya Pranata.";
-
-//   setTimeout(() => {
-//     content.innerHTML += `<div><span class="font-semibold">Bot:</span> ${botResponse}</div>`;
-//     content.scrollTop = content.scrollHeight;
-//   }, 500);
-
+//   // Reset input
 //   input.value = "";
-// }
 
-window.chatbaseConfig = {
-  chatbotId: "eLxzmUdJ8spY4COWqWRh4",
-};
+//   try {
+//     const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyAvKwnPr5nqtI9zyDTuDYvD35srg8KPKWQ", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({
+//         contents: [{ parts: [{ text: userMsg }] }],
+//       }),
+//     });
+
+//     const result = await response.json();
+
+//     let botReply = "Maaf, saya belum bisa menjawab.";
+//     if (result?.candidates?.[0]?.content?.parts?.[0]?.text) {
+//       botReply = result.candidates[0].content.parts[0].text;
+//     }
+
+//     document.getElementById("loading-response").remove();
+//     content.innerHTML += `<div><span class="font-semibold">Bot:</span> ${botReply}</div>`;
+//     content.scrollTop = content.scrollHeight;
+//   } catch (error) {
+//     console.error("Error:", error);
+//     document.getElementById("loading-response").remove();
+//     content.innerHTML += `<div><span class="font-semibold">Bot:</span> Terjadi kesalahan saat menghubungi AI.</div>`;
+//   }
+// }
