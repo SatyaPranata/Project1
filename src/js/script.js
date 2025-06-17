@@ -165,3 +165,4 @@ function quickReply(text) {
   document.getElementById("chat-input").value = text;
   sendMessage(text);
 }
+ 
